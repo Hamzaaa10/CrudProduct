@@ -1,0 +1,47 @@
+﻿@model Product
+
+<h1>Update Product</h1>
+
+
+<form  asp-action="Edit" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Id"> Id</label>
+        <input asp-for="Id" class="form-control" readonly disabled>
+        <span asp-validation-for="Id" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label  asp-for="Name"> Name</label>
+        <input asp-for="Name" class="form-control">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="prand">Brand</label>
+        <input asp-for="prand" class="form-control">
+        <span asp-validation-for="prand" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Category">Category</label>
+        <input asp-for="Category" class="form-control">
+        <span asp-validation-for="Category" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price">Price</label>
+        <input asp-for="Price" class="form-control">
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" class="form-control">
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Imgurl">ImageFile</label>
+        <input asp-for="Imgurl" class="form-control" type="file">
+        <span asp-validation-for="Imgurl" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+
+    <a class="btn btn-dark mt-3 href="/Product/Index">Cancel</a>
+</form>
